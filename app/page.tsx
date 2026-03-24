@@ -1,5 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
+import { routes } from '@/lib/routes';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -14,9 +16,11 @@ export default function Home() {
             seul endroit.
           </p>
           <div className="flex flex-col items-center gap-4">
-            <Button size="lg" className="h-12 px-8 text-lg font-medium">
-              Commencez gratuitement <ArrowRight />
-            </Button>
+            <Link href={routes.signUp}>
+              <Button size="lg" className="h-12 px-8 text-lg font-medium">
+                Commencez gratuitement <ArrowRight />
+              </Button>
+            </Link>
             <p className="text-sm text-muted-foreground">
               Gratuit pour toujours.
             </p>
