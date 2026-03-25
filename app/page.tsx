@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Briefcase, CheckCircle2, TrendingUp } from 'lucide-react';
 import { routes } from '@/lib/routes';
 import Link from 'next/link';
 import ImageTabs from '@/components/ImageTabs';
@@ -30,6 +30,50 @@ export default function Home() {
       </section>
       <section className="border-t bg-white py-16">
         <ImageTabs />
+      </section>
+      <section className="border-t bg-white py-24">
+        <div className="container mx-auto px-4">
+          <div className="grid gap-12 md:grid-cols-3">
+            <div className="flex flex-col">
+              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
+                <Briefcase className="h-6 w-6 text-primary" />
+              </div>
+              <h3 className="mb-3 text-2xl font-semibold text-black">
+                Organisez vos candidatures
+              </h3>
+              <p className="text-muted-foreground">
+                Créez des tableaux et des colonnes personnalisés pour suivre vos
+                candidatures à chaque étape du processus.
+              </p>
+            </div>
+            <div className="flex flex-col">
+              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
+                <TrendingUp className="h-6 w-6 text-primary" />
+              </div>
+              <h3 className="mb-3 text-2xl font-semibold text-black">
+                Suivez les progrès
+              </h3>
+              <p className="text-muted-foreground">
+                Suivez l&apos;état d&apos;avancement de votre candidature, de la
+                candidature initiale à l&apos;entretien puis à l&apos;offre
+                d&apos;emploi, grâce à des tableaux Kanban visuels.
+              </p>
+            </div>
+            <div className="flex flex-col">
+              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
+                <CheckCircle2 className="h-6 w-6 text-primary" />
+              </div>
+              <h3 className="mb-3 text-2xl font-semibold text-black">
+                Restez organisé
+              </h3>
+              <p className="text-muted-foreground">
+                Ne perdez jamais de vue une candidature. Conservez toutes vos
+                informations relatives à votre recherche d&apos;emploi au même
+                endroit.
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
   );
