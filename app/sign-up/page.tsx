@@ -11,6 +11,7 @@ import {
 } from '@/components/ui/card';
 import FormInputGroup from '@/components/FormInputGroup';
 import Link from 'next/link';
+import { routes } from '@/lib/routes';
 
 function SignUp() {
   return (
@@ -60,7 +61,7 @@ function SignUp() {
             <p className="text-center text-sm text-gray-600">
               Déjà inscrit ?{' '}
               <Link
-                href="#"
+                href={routes.signIn}
                 className="font-medium text-primary hover:underline"
               >
                 Se connecter
