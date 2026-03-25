@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import { routes } from '@/lib/routes';
 import Link from 'next/link';
+import ImageTabs from '@/components/ImageTabs';
 
 export default function Home() {
   return (
@@ -26,6 +27,9 @@ export default function Home() {
             </p>
           </div>
         </div>
+      </section>
+      <section className="border-t bg-white py-16">
+        <ImageTabs />
       </section>
     </main>
   );
