@@ -31,15 +31,15 @@ function Navbar() {
 
   return (
     <nav className="border-b border-gray-200 bg-white">
-      <div className="container mx-auto flex h-16 items-center px-4 justify-between">
+      <div className="container mx-auto flex h-16 items-center px-4 gap-4 justify-between">
         <Link
           href={routes.home}
           className="flex items-center gap-2 text-xl font-semibold text-primary"
         >
           <Briefcase />
-          Job Tracker
+          <span className="hidden md:block">Job Tracker</span>
         </Link>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-1 md:gap-4">
           {session?.user ? (
             <>
               <Link href="">
@@ -78,7 +78,7 @@ function Navbar() {
             </>
           ) : (
             <>
-              <Link href={routes.signIn}>
+              <Link className="hidden md:block" href={routes.signIn}>
                 <Button
                   variant="ghost"
                   className="text-gray-700 hover:text-black"
